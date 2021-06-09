@@ -2,7 +2,7 @@
 import numpy as np
 from collections import defaultdict
 
-SCREEN_WIDTH, SCREEN_HEIGHT = 48, 48
+SCREEN_WIDTH, SCREEN_HEIGHT = 50, 50
 A_SPEED = 0.07
 B_SPEED = 0.02
 
@@ -85,6 +85,7 @@ def render_torus(sinA, cosA, sinB, cosB):
                     index = int(L * 8)
                     output[yp][xp] = ".,-~:;=!*#$@"[index]
 
+    print("\x1b[H")
     for col in output:
         for value in col:
             print(value, end=" ")
