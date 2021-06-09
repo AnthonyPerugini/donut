@@ -3,11 +3,11 @@
 ### project is not an original idea but this is my implementation.
 
 
-By using projection of 3-d points across the surface of a spinning torus, we then project the torus onto a virtual 2-d screen.
+By using maths, we can render a bunch of points along the surface of a virtual torus, we then project the points onto a virtual 2-D screen and do more maths to spin them.
 
-By doing so, we are able to get a printout of the torus on the command line.
+We can then shade the points based on their normal projection towards the camera, parts of the torus facing the camra are rendered with denser ASCII
+characters ('#','@', etc.), and one facing nearly perpendicular to the screen are rendered with less density ('.', ',', etc.).
 
-We shade the points based on their normal projection towards the camera, parts of the torus facing the camra are denser ASCII
-characters ('#','@', etc.), and one facing nearly perpendicular to the screen are shaded lightly ('.', ',', etc.)
+Points with normal vectors pointing away from the screen and ones behind other portions of the torus are not rendered to improve performance and to keep the torus from 'bleeding though' itself.
 
-Parts of the torus behind other portions of the torus, and faces facing away from the camera are not drawn.
+In doing so, we can get a printout of the torus on the command line, spinning in all it's glory.
